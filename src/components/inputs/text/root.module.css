@@ -1,0 +1,46 @@
+.input_grid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    row-gap: 0.3rem;
+    text-transform: uppercase;
+}
+
+
+.root {
+    --input-padding-top: 0px;
+    --input-padding-bot: 0.2rem;
+    --input-padding-left: 1rem;
+    --input-padding-right: 2rem;
+    --input-font-size: 1.2rem;
+    --input-width: 240px;
+    font-family: BlenderProBook, sans-serif;
+    font-size: var(--input-font-size);
+    width: 100%;
+
+}
+
+.root_input {
+    width: var(--input-width);
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    padding: var(--input-padding-top) var(--input-padding-right) var(--input-padding-bot) var(--input-padding-left);
+    border: none;
+    text-decoration: none;
+    outline: none;
+}
+
+.root::before {
+    width: var(--input-width);
+    font-weight: inherit;
+    font-size: inherit;
+    content: 'X';
+    color: transparent;
+    position: absolute;
+    display: block;
+    padding: var(--input-padding-top) var(--input-padding-right) var(--input-padding-bot) var(--input-padding-left);
+    clip-path: polygon(0 calc(100% - 10px), 10px 100%, 100% 100%, 100% calc(100% - 8px), calc(100% - 20px) calc(100% - 8px), calc(100% - 20px - 8px) calc(100% - 2px), 11px calc(100% - 2px), 0 calc(100% - 13px));
+    background-color: #fff;
+}

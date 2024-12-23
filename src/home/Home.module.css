@@ -1,7 +1,14 @@
+.main {
+    display: grid;
+    grid-template-rows: var(--main-section-height) 1fr;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
 .cover {
     width: 100%;
     position: absolute;
-    top: 4rem;
     left: 0;
     right: 0;
     border-radius: 0 0 0.5rem 0.5rem;

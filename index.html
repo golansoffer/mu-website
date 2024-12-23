@@ -4,13 +4,16 @@
     <style>
 
         @font-face {
-            font-family: Cyber;
-            src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
-            font-display: swap;
+            font-family: BlenderProBook;
+            font-style: normal;
+            font-weight: 400;
+            src: url('/fonts/BlenderPro-Book.woff2') format("woff2");
         }
 
-        * {
-            box-sizing: border-box;
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
         }
 
         :root {
@@ -25,18 +28,13 @@
         body {
             margin: 0;
             position: relative;
-            font-family: 'Cyber', sans-serif;
+            font-family: 'BlenderProBook', sans-serif;
+            font-size: 16px;
             color: var(--text-color);
             background: #000;
             padding-bottom: 10rem;
         }
-
-        main {
-            display: grid;
-            grid-template-rows: 4rem var(--main-section-height) 1fr;
-            justify-items: center;
-            align-items: center;
-        }
+        
     </style>
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>

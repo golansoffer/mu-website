@@ -1,17 +1,17 @@
-import {useForm} from "@tanstack/react-form";
-import styles from './Register.module.css';
 import {z} from "zod";
-import Button from "../components/buttons/primary";
+import {useForm} from "@tanstack/react-form";
+import Button from "../components/buttons/primary/Root";
+import {TextInput} from "../components/inputs/text/root";
+import styles from './Register.module.css';
 
 export function Register() {
-    return <section>
+    return <main className={styles.main}>
         <h1 className={styles.form_title}>
-            <span>-</span>
             Register
             <span>.</span>
         </h1>
         <RegisterForm/>
-    </section>
+    </main>
 }
 
 const userSchema = z.object({
@@ -42,10 +42,11 @@ export function RegisterForm() {
             onChange: userSchema,
         },
     });
-    console.log('form', form);
+
     return (
 
         <form
+            className={styles.form}
             onSubmit={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -56,65 +57,70 @@ export function RegisterForm() {
                 <form.Field
                     name="username"
                     children={(field) => (
-                        <input
+                        <TextInput
+                            label={field.name}
                             name={field.name}
-                            placeholder={field.name}
+                            placeholder={`Enter ${field.name}...`}
                             value={field.state.value}
                             onBlur={field.handleBlur}
-                            onChange={(e) => field.handleChange(e.target.value)}
+                            onChange={field.handleChange}
                         />
                     )}
                 />
                 <form.Field
                     name="password"
                     children={(field) => (
-                        <input
+                        <TextInput
+                            label={field.name}
                             name={field.name}
-                            placeholder={field.name}
+                            placeholder={`Enter ${field.name}...`}
                             value={field.state.value}
                             onBlur={field.handleBlur}
-                            onChange={(e) => field.handleChange(e.target.value)}
+                            onChange={field.handleChange}
                         />
                     )}
                 />
                 <form.Field
                     name="confirmPassword"
                     children={(field) => (
-                        <input
+                        <TextInput
+                            label={field.name}
                             name={field.name}
-                            placeholder={field.name}
+                            placeholder={`Confirm password...`}
                             value={field.state.value}
                             onBlur={field.handleBlur}
-                            onChange={(e) => field.handleChange(e.target.value)}
+                            onChange={field.handleChange}
                         />
                     )}
                 />
                 <form.Field
                     name="securityCode"
                     children={(field) => (
-                        <input
+                        <TextInput
+                            label={field.name}
                             name={field.name}
-                            placeholder={field.name}
+                            placeholder={`Enter security code...`}
                             value={field.state.value}
                             onBlur={field.handleBlur}
-                            onChange={(e) => field.handleChange(e.target.value)}
+                            onChange={field.handleChange}
                         />
                     )}
                 />
                 <form.Field
                     name="email"
                     children={(field) => (
-                        <input
+                        <TextInput
+                            label={field.name}
                             name={field.name}
-                            placeholder={field.name}
+                            placeholder={`Enter ${field.name}...`}
                             value={field.state.value}
                             onBlur={field.handleBlur}
-                            onChange={(e) => field.handleChange(e.target.value)}
+                            onChange={field.handleChange}
                         />
                     )}
                 />
-                <Button>SUBMIT</Button>
             </div>
+            <Button>SUBMIT</Button>
         </form>
     )
 }

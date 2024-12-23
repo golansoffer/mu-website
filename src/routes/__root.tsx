@@ -9,10 +9,8 @@ export const Route = createRootRoute({
 function RootComponent() {
     return (
         <>
-            <main>
-                <Navigation/>
-                <Outlet/>
-            </main>
+            <Navigation/>
+            <Outlet/>
         </>
     );
 }

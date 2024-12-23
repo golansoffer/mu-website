@@ -2,7 +2,7 @@ import styles from "./Home.module.css";
 
 export function Home() {
     return (
-        <>
+        <main className={styles.main}>
             <section className={styles.cover}>
                 <video autoPlay muted loop>
                     <source src="/movie.webm" type="video/mp4"/>
@@ -10,11 +10,9 @@ export function Home() {
             </section>
 
             <section className={styles.banner}>
-                <section className={styles.logo_container}>
-                    <img src='/mu_logo.png' alt="MU Logo" className={styles.mu_logo}/>
-                </section>
+                <img src='/mu_logo.png' alt="MU Logo" className={styles.mu_logo}/>
             </section>
 
-        </>
+        </main>
     );
 }

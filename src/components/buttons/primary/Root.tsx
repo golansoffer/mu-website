@@ -1,4 +1,4 @@
-import styles from './index.module.css';
+import styles from './root.module.css';
 import {getRandomNumberInRange, Merge} from "../../../utils";
 import {HTMLAttributes, useRef} from "react";
 
