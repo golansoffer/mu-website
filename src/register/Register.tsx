@@ -1,10 +1,15 @@
 import {useForm} from "@tanstack/react-form";
 import styles from './Register.module.css';
 import {z} from "zod";
+import Button from "../components/buttons/primary";
 
 export function Register() {
     return <section>
-        <h1 className={styles.form_title}>Register</h1>
+        <h1 className={styles.form_title}>
+            <span>-</span>
+            Register
+            <span>.</span>
+        </h1>
         <RegisterForm/>
     </section>
 }
@@ -108,9 +113,8 @@ export function RegisterForm() {
                         />
                     )}
                 />
-                <button type="submit">Submit</button>
+                <Button>SUBMIT</Button>
             </div>
         </form>
-
     )
 }
