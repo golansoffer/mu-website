@@ -1,0 +1,36 @@
+.nav {
+    padding: 2rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    justify-items: center;
+
+    ul {
+        margin: 0;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        column-gap: 4rem;
+        list-style: none;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        li {
+            color: white;
+            cursor: pointer;
+            transition: color 100ms ease;
+
+            a {
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: inherit;
+            }
+
+            a:hover {
+                color: var(--highlight-color);
+            }
+        }
+    }
+}
