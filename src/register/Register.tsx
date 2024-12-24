@@ -18,7 +18,6 @@ const userSchema = z.object({
     username: z.string().min(4),
     password: z.string().min(8),
     confirmPassword: z.string().min(8),
-    securityCode: z.string().min(6),
     email: z.string().email(),
 });
 
@@ -32,7 +31,6 @@ export function RegisterForm() {
             email: '',
             password: '',
             confirmPassword: '',
-            securityCode: '',
         },
         onSubmit: async ({value}) => {
             // Do something with form data
@@ -87,19 +85,6 @@ export function RegisterForm() {
                             label={field.name}
                             name={field.name}
                             placeholder={`Confirm password...`}
-                            value={field.state.value}
-                            onBlur={field.handleBlur}
-                            onChange={field.handleChange}
-                        />
-                    )}
-                />
-                <form.Field
-                    name="securityCode"
-                    children={(field) => (
-                        <TextInput
-                            label={field.name}
-                            name={field.name}
-                            placeholder={`Enter security code...`}
                             value={field.state.value}
                             onBlur={field.handleBlur}
                             onChange={field.handleChange}

@@ -9,6 +9,7 @@
 .cover {
     width: 100%;
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
     border-radius: 0 0 0.5rem 0.5rem;
@@ -53,4 +54,37 @@
     max-width: 400px;
     height: auto;
     filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 50%;
+    display: grid;
+    row-gap: 2rem;
+    justify-items: center;
+    padding: 0 4rem;
+}
+
+.top_characters {
+    position: absolute;
+    bottom: -5rem;
+    right: -5rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 2rem;
+    transform: skew(-25deg);
+    padding: 1rem 6rem;;
+
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    > article {
+        transform: skew(25deg);
+    }
 }

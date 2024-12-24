@@ -1,0 +1,52 @@
+.root1 {
+}
+
+.root2 {
+}
+
+.container {
+    width: 80px; /* Width of the shape */
+    height: 80px; /* Height of the shape */
+    background-color: transparent; /* Background color if needed */
+    border: 1px solid #FAFAFA;
+}
+
+.container img {
+    width: inherit; /* Make the image fill the container */
+    height: inherit; /* Adjust height to match the container */
+    object-fit: cover; /* Ensure the image covers the container properly */
+}
+
+.root1::before, .root1::after {
+    content: ' ';
+    width: 100%;
+    display: block;
+    background-color: #00ffd2;
+    position: relative;
+    height: 6px;
+}
+
+.root1::before {
+    clip-path: polygon(0 100%, 6px 0, 10% 0, 10% 100%, 80% 100%, calc(80% + 6px) 0, 95% 0, 95% 100%, calc(95% + 6px) 100%, calc(95% + 6px) 0, calc(95% + 2 * 6px) 0, calc(95% + 2 * 6px) 100%, calc(95% + 3 * 6px) 100%, calc(95% + 3 * 6px) 0, 100% 0, 100% 100%);
+}
+
+.root1::after {
+    clip-path: polygon(100% 0, 100% 100%, calc(100% - 6px) 100%, calc(100% - 6px) 0, calc(100% - 2 * 6px) 0, calc(100% - 2 * 6px) 100%, 90% 100%, 90% 0, 75% 0, 75% 100%, 60% 100%, calc(60% - 6px) 0);
+}
+
+.root2::before, .root2::after {
+    content: ' ';
+    width: 100%;
+    display: block;
+    background-color: purple;
+    position: relative;
+    height: 6px;
+}
+
+.root2::before {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 80% 0, calc(80% - 6px) 100%, 30% 100%, calc(30% - 6px) 0, 6px 0);
+}
+
+.root2::after {
+    clip-path: polygon(60% 0, calc(60% + 6px) 100%, 100% 100%, 100% 0);
+}

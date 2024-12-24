@@ -1,7 +1,13 @@
 .main {
+    position: relative;
     margin-top: 2rem;
     display: grid;
     justify-content: center;
+
+    background-image: url('/public/svg/cube_animation.svg');
+    background-size: contain;
+    background-position: left;
+    background-repeat: nO-repeat;
 }
 
 .form_container {
