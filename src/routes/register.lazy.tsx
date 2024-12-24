@@ -6,8 +6,5 @@ export const Route = createLazyFileRoute("/register")({
 });
 
 function RouteComponent() {
-    return <>
-        <div/>
-        <Register/>
-    </>;
+    return <Register/>;
 }

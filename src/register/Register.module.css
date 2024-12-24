@@ -3,11 +3,22 @@
     margin-top: 2rem;
     display: grid;
     justify-content: center;
+    padding-bottom: var(--main-bottom-gap);
+}
 
+.cubes_animation {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 45rem;
+    height: 45rem;
+
+    z-index: -9;
     background-image: url('/public/svg/cube_animation.svg');
     background-size: contain;
     background-position: left;
-    background-repeat: nO-repeat;
+    background-repeat: no-repeat;
 }
 
 .form_container {
@@ -25,6 +36,7 @@
     grid-auto-flow: row;
     row-gap: 3rem;
     align-items: center;
+    justify-items: center;
 }
 
 .form_title {

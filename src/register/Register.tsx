@@ -3,11 +3,25 @@ import {useForm} from "@tanstack/react-form";
 import Button from "../components/buttons/primary/Root";
 import {TextInput} from "../components/inputs/text/root";
 import styles from './Register.module.css';
+import {useRef} from "react";
+import {getRandomNumberInRange} from "../utils";
+
+const registrationTitles: string[] = [
+    "Forge Your Path",
+    "Your Legacy",
+    "Enter the Realm",
+    "Begin Your Chapter",
+    "For Glory",
+    "The Journey Begins",
+];
+
 
 export function Register() {
+    const index = useRef(getRandomNumberInRange(0, registrationTitles.length - 1));
     return <main className={styles.main}>
+        <div className={styles.cubes_animation}/>
         <h1 className={styles.form_title}>
-            Register
+            {registrationTitles[index.current]}
             <span>.</span>
         </h1>
         <RegisterForm/>

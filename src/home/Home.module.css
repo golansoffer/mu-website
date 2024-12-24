@@ -4,6 +4,7 @@
     justify-items: center;
     align-items: center;
     position: relative;
+    padding-bottom: var(--main-bottom-gap);
 }
 
 .cover {
@@ -67,24 +68,23 @@
 
 .top_characters {
     position: absolute;
-    bottom: -5rem;
-    right: -5rem;
+    bottom: -3rem;
+    right: -2rem;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     gap: 2rem;
-    transform: skew(-25deg);
-    padding: 1rem 6rem;;
+    transform: skew(-15deg);
+    padding: 1rem 4rem;
 
 
     background: rgba(255, 255, 255, 0.2);
     border-radius: 0.3rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.4);
 
     > article {
-        transform: skew(25deg);
+        transform: skew(15deg);
     }
 }

@@ -11,6 +11,10 @@ type TextInputProps = Merge<HTMLAttributes<HTMLInputElement>, {
     onChange: (value: string) => void;
 }>;
 
+/*
+    Inspiration:
+    https://codepen.io/gwannon/pen/LYjvOLK
+*/
 export function TextInput({value, label, placeholder, onChange = fnPlaceholder, ...rest}: TextInputProps) {
     const _id = useRef(crypto.randomUUID());
     return (

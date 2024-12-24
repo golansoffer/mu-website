@@ -67,7 +67,7 @@
 
 .stack:hover {
     span {
-        animation: stack 340ms cubic-bezier(.46, .29, 0, 1.24) 1 backwards calc(var(--index) * 120ms), glitch 1s ease infinite 1s alternate-reverse;
+        animation: stack 170ms cubic-bezier(.46, .29, 0, 1.24) 1 backwards calc(var(--index) * 120ms), glitch 500ms ease infinite 500ms alternate-reverse;
     }
 }
 

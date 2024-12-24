@@ -17,29 +17,29 @@
     <use href="#cube-middle" x="64" y="480"/>
     <use href="#cube-middle" x="192" y="480"/>
 
-    <rect width="512" height="512" fill="url(#fog)"/>
+    <!--<rect width="512" height="512" fill="url(#fog)"/>-->
 
     <defs>
         <g id="cube-top">
-            <path fill="#78808e">
+            <path fill="#040404">
                 <animate attributeName="d" dur="6s" repeatCount="indefinite" calcMode="linear" values="M64 64 L0 32 L0 96 L64 128Z;
 						M64 64 L0 32 L0 32 L64 64Z;
 						M64 64 L0 32 L0 32 L64 64Z;
 						M64 64 L0 32 L0 32 L64 64Z"/>
             </path>
-            <path fill="#A2B1B7">
+            <path fill="#0d0d0d">
                 <animate attributeName="d" dur="6s" repeatCount="indefinite" calcMode="linear" values="M64 64 L128 32 L128 96 L64 128Z;
 						M64 64 L128 32 L128 32 L64 64Z;
 						M64 64 L128 32 L128 32 L64 64Z;
 						M64 64 L128 32 L128 32 L64 64Z"/>
             </path>
-            <path fill="#78808e">
+            <path fill="#040404">
                 <animate attributeName="d" dur="6s" repeatCount="indefinite" calcMode="linear" keyTimes="0;.33;1"
                          values="M64 256 L0 224 L0 224 L64 256Z;
 						M64 192 L0 160 L0 224 L64 256Z;
 						M64 64 L0 32 L0 96 L64 128Z"/>
             </path>
-            <path fill="#A2B1B7">
+            <path fill="#0d0d0d">
                 <animate attributeName="d" dur="6s" repeatCount="indefinite" calcMode="linear" keyTimes="0;.33;1"
                          values="M64 256 L128 224 L128 224 L64 256Z;
 						M64 192 L128 160 L128 224 L64 256Z;
@@ -47,25 +47,25 @@
             </path>
         </g>
         <g id="cube-middle">
-            <path fill="#A2B1B7">
+            <path fill="#0d0d0d">
                 <animate attributeName="d" dur="6s" repeatCount="indefinite" calcMode="linear" values="M64 128 L128 96 L128 160 L64 192Z;
 						M64 64 L128 32 L128 96 L64 128Z;
 						M64 64 L128 32 L128 32 L64 64Z;
 						M64 64 L128 32 L128 32 L64 64Z"/>
             </path>
-            <path fill="#78808e">
+            <path fill="#040404">
                 <animate attributeName="d" dur="6s" repeatCount="indefinite" calcMode="linear" values="M64 128 L0 96 L0 160 L64 192Z;
 						M64 64 L0 32 L0 96 L64 128Z;
 						M64 64 L0 32 L0 32 L64 64Z;
 						M64 64 L0 32 L0 32 L64 64Z"/>
             </path>
-            <path fill="#A2B1B7">
+            <path fill="#0d0d0d">
                 <animate attributeName="d" dur="6s" repeatCount="indefinite" calcMode="linear" values="M64 256 L128 224 L128 224 L64 256Z;
 						M64 256 L128 224 L128 224 L64 256Z;
 						M64 192 L128 160 L128 224 L64 256Z;
 						M64 128 L128 96 L128 160 L64 192Z"/>
             </path>
-            <path fill="#78808e">
+            <path fill="#040404">
                 <animate attributeName="d" dur="6s" repeatCount="indefinite" calcMode="linear" values="M64 256 L0 224 L0 224 L64 256Z;
 						M64 256 L0 224 L0 224 L64 256Z;
 						M64 192 L0 160 L0 224 L64 256Z;

@@ -7,8 +7,23 @@
 .container {
     width: 80px; /* Width of the shape */
     height: 80px; /* Height of the shape */
-    background-color: transparent; /* Background color if needed */
     border: 1px solid #FAFAFA;
+    background-color: #FAFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    clip-path: polygon(
+            0% 0%, /* Top-left corner */ 100% 0%, /* Top-right corner */ 100% 100%, /* Bottom-right corner */ 40% 100%, /* Bottom edge, slightly right from bottom-left corner */ -5% 60% /* Left edge, slightly up from bottom-left corner */
+    )
+}
+
+
+.inner {
+    width: 79px; /* Outer width minus twice the border width */
+    height: 79px; /* Outer height minus twice the border width */
+    background-color: transparent; /* Inner background color */
+    clip-path: inherit; /* Inherit the same clip-path as the outer element */
 }
 
 .container img {

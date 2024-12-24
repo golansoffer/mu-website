@@ -19,7 +19,9 @@ export function Avatar({class: muClass}: AvatarProps) {
         <article style={{display: 'grid', gridAutoFlow: 'row', gridAutoRows: 'max-content', rowGap: '0.5rem'}}>
             <div className={styles.root1}>
                 <div className={styles.container}>
-                    <img src={classImageMapper[muClass]} alt={muClass}/>
+                    <div className={styles.inner}>
+                        <img src={classImageMapper[muClass]} alt={muClass}/>
+                    </div>
                 </div>
             </div>
             <desc>
