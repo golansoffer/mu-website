@@ -28,12 +28,19 @@ export function Register() {
     </main>
 }
 
-const userSchema = z.object({
-    username: z.string().min(4),
-    password: z.string().min(8),
-    confirmPassword: z.string().min(8),
-    email: z.string().email(),
-});
+const userSchema = z
+    .object({
+        username: z.string().min(4, "Username must be at least 4 characters long."),
+        password: z.string().min(8, "Password must be at least 8 characters long."),
+        confirmPassword: z
+            .string()
+            .min(8, "Confirm Password must be at least 8 characters long."),
+        email: z.string().email("Invalid email address."),
+    })
+    .refine((data) => data.password === data.confirmPassword, {
+        path: ["confirmPassword"], // Points the error at `confirmPassword`
+        message: "Passwords do not match.",
+    });
 
 type User = z.infer<typeof userSchema>
 
