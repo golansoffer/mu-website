@@ -103,7 +103,7 @@ export function RegisterForm() {
                     name="confirmPassword"
                     children={(field) => (
                         <TextInput
-                            label={field.name}
+                            label="Confirm Password"
                             name={field.name}
                             placeholder={`Confirm password...`}
                             value={field.state.value}
