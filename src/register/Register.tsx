@@ -5,6 +5,8 @@ import {TextInput} from "../components/inputs/text/root";
 import styles from './Register.module.css';
 import {useRef} from "react";
 import {getRandomNumberInRange} from "../utils";
+import {useMutation} from "@tanstack/react-query";
+import {fetcher} from "../api/root";
 
 const registrationTitles: string[] = [
     "Forge Your Path",
@@ -26,6 +28,13 @@ export function Register() {
         </h1>
         <RegisterForm/>
     </main>
+}
+
+type FormPayload = {
+    username: string;
+    password: string;
+    confirmPassword: string;
+    email: string;
 }
 
 const userSchema = z
@@ -54,12 +63,23 @@ export function RegisterForm() {
             confirmPassword: '',
         },
         onSubmit: async ({value}) => {
-            // Do something with form data
-            console.log('success', value);
+            void mutateAsync(value);
         },
         validators: {
             onChange: userSchema,
         },
+    });
+
+    const {mutateAsync, isError, isPending, isSuccess} = useMutation({
+        mutationFn: function (payload: FormPayload) {
+            return fetcher<{ message: string }, FormPayload>('register', {
+                method: 'POST',
+                body: JSON.stringify(payload),
+            })
+        },
+        onSuccess: function () {
+            form.reset();
+        }
     });
 
     return (

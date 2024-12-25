@@ -1,8 +1,30 @@
-.nav {
-    padding: 2rem;
+.server_name {
+    margin-right: auto;
+}
+
+.auth {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+    align-items: center;
+    margin-left: auto;
+    text-transform: uppercase;
+
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: inherit;
+    }
+
+    a:hover {
+        color: var(--highlight-color);
+    }
+}
+
+.nav {
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 30% 1fr 30%;
     justify-items: center;
 
     ul {
@@ -11,6 +33,7 @@
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: max-content;
+        align-items: center;
         column-gap: 8rem;
         list-style: none;
         text-transform: uppercase;

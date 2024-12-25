@@ -1,6 +1,7 @@
 import {Link} from "@tanstack/react-router";
 import style from "./Navigation.module.css";
 import {CSSProperties} from "react";
+import {AuthBar} from "../components/auth/AuthBar";
 
 function GlitchedText({children}: { children: string }) {
     return <div className={style.container}>
@@ -15,20 +16,12 @@ function GlitchedText({children}: { children: string }) {
 export function Navigation() {
     return (
         <nav className={style.nav}>
+            <h3 className={style.server_name}>MUTINY</h3>
             <ul>
                 <li>
                     <Link to="/">
                         <GlitchedText>
                             Home
-                        </GlitchedText>
-                    </Link>
-                </li>
-
-
-                <li>
-                    <Link to="/register">
-                        <GlitchedText>
-                            Register
                         </GlitchedText>
                     </Link>
                 </li>
@@ -52,6 +45,7 @@ export function Navigation() {
                 </li>
 
             </ul>
+            <AuthBar className={style.auth}/>
         </nav>
     );
 }
