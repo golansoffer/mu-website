@@ -1,5 +1,15 @@
 .server_name {
-    margin-right: auto;
+    margin: auto auto auto 0;
+    display: flex;
+}
+
+.server_credit {
+    width: 25px;
+    background-image: url("/public/svg/c.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+
 }
 
 .auth {
@@ -101,6 +111,12 @@
 
 .stack span:nth-child(even) {
     --glitch-translate: -8px;
+}
+
+.stack_animated {
+    span {
+        animation: stack 170ms cubic-bezier(.46, .29, 0, 1.24) 1 backwards calc(var(--index) * 120ms), glitch 500ms ease infinite 500ms alternate-reverse;
+    }
 }
 
 @keyframes stack {
