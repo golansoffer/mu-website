@@ -22,7 +22,7 @@
 .inner {
     width: 79px; /* Outer width minus twice the border width */
     height: 79px; /* Outer height minus twice the border width */
-    background-color: transparent; /* Inner background color */
+    background: linear-gradient(to bottom, #3c4a70 90%, #d1d6e0 70%);
     clip-path: inherit; /* Inherit the same clip-path as the outer element */
 }
 
