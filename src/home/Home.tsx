@@ -45,34 +45,39 @@ export function Home() {
                     Fighter, and participate in a variety of official events and community activities.
                 </p>
                 <Table>
-                    <tbody>
                     <tr>
-                        <td>EXP</td>
-                        <td>5x</td>
-                        <td>We aim for a competitive non P2W server</td>
-
+                        <th>Feature</th>
+                        <th>Details</th>
                     </tr>
                     <tr>
-                        <td>Drop Tate</td>
+                        <td>Server Name</td>
+                        <td>MU CORE</td>
+                    </tr>
+                    <tr>
+                        <td>Version</td>
+                        <td>Season 6 Episode 3</td>
+                    </tr>
+                    <tr>
+                        <td>EXP Rate</td>
+                        <td>x5</td>
+                    </tr>
+                    <tr>
+                        <td>Drop Rate</td>
                         <td>20%</td>
-                        <td>Strong trading & economics</td>
                     </tr>
                     <tr>
-                        <td>Max Level</td>
-                        <td>400</td>
-                        <td></td>
+                        <td>Reset System</td>
+                        <td>Max Resets: 10, Reset Level: 400, Reward: 500 Stat Points</td>
                     </tr>
                     <tr>
-                        <td>Reset</td>
-                        <td>OFF</td>
-                        <td>Currently we dont allow resets, it might change</td>
+                        <td>PVP</td>
+                        <td>Castle Siege Enabled, PK System Active</td>
                     </tr>
                     <tr>
-                        <td>Master Level</td>
-                        <td>OFF</td>
-                        <td>Currently we dont allow Master Level, it might change</td>
+                        <td>Events</td>
+                        <td>Chaos Castle, Blood Castle, Devil Square, Golden Invasions, White Wizard</td>
                     </tr>
-                    </tbody>
+
                 </Table>
             </section>
         </main>
