@@ -1,5 +1,4 @@
 .main {
-    overflow: hidden;
     display: grid;
     grid-template-rows: var(--main-section-height) 1fr;
     justify-items: center;
@@ -55,17 +54,9 @@
     grid-auto-rows: max-content;
     row-gap: 1rem;
 
-    h1, h3 {
-        margin: 0;
-    }
-
-    h1 {
-        font-size: 4.5rem;
-    }
-
     h3 {
         font-size: 1.2rem;
-        color: hsl(180, 90%, 50%);;
+        color: hsl(180, 90%, 50%);
     }
 
     background: rgba(255, 255, 255, 0.1);

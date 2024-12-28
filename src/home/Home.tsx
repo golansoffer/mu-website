@@ -1,13 +1,13 @@
 import styles from "./Home.module.css";
 import {SequentialVideoPlayer} from "../components/video/VideoPlayer";
 import Button from "../components/buttons/primary/Root";
+import {TopCharacters} from "./TopCharacters";
 
 const videoSources = [
     {src: "/mu_cinematic.mp4", type: "video/mp4"},
     {src: "/mu_short.mp4", type: "video/mp4"},
     {src: "/movie.webm", type: "video/webm"},
 ];
-
 
 export function Home() {
     return (
@@ -27,6 +27,8 @@ export function Home() {
                     <Button>Play</Button>
                 </div>
             </section>
+
+            <TopCharacters/>
         </main>
     );
 }
