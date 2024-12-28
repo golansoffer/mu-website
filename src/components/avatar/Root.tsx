@@ -24,10 +24,10 @@ export function Avatar({class: muClass}: AvatarProps) {
                     </div>
                 </div>
             </div>
-            <desc>
+            <dl style={{margin: 0}}>
                 <h4 style={{margin: 0, padding: 0}}>Nickname</h4>
                 <p style={{margin: 0, padding: 0}}>321</p>
-            </desc>
+            </dl>
         </article>
     );
 }

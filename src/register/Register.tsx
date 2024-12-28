@@ -3,12 +3,13 @@ import {useForm} from "@tanstack/react-form";
 import Button from "../components/buttons/primary/Root";
 import {TextInput} from "../components/inputs/text/root";
 import styles from './Register.module.css';
-import {useRef} from "react";
+import {useCallback, useRef} from "react";
 import {getRandomNumberInRange} from "../utils";
 import {useMutation} from "@tanstack/react-query";
 import {fetcher} from "../api/root";
 
 const registrationTitles: string[] = [
+    "Ready for Battle?",
     "Forge Your Path",
     "Your Legacy",
     "Enter the Realm",
@@ -51,7 +52,7 @@ const userSchema = z
         message: "Passwords do not match.",
     });
 
-type User = z.infer<typeof userSchema>
+type User = z.infer<typeof userSchema>;
 
 export function RegisterForm() {
 
@@ -63,14 +64,14 @@ export function RegisterForm() {
             confirmPassword: '',
         },
         onSubmit: async ({value}) => {
-            void mutateAsync(value);
+            await mutateAsync(value);
         },
         validators: {
             onChange: userSchema,
         },
     });
 
-    const {mutateAsync, isError, isPending, isSuccess} = useMutation({
+    const {mutateAsync} = useMutation({
         mutationFn: function (payload: FormPayload) {
             return fetcher<{ message: string }, FormPayload>('register', {
                 method: 'POST',
@@ -82,15 +83,17 @@ export function RegisterForm() {
         }
     });
 
+    const submitHandler = useCallback(function (e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        e.stopPropagation();
+        void form.handleSubmit();
+    }, [form]);
+
     return (
 
         <form
             className={styles.form}
-            onSubmit={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                void form.handleSubmit();
-            }}
+            onSubmit={submitHandler}
         >
             <div className={styles.form_container}>
                 <form.Field

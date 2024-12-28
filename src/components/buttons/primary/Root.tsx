@@ -8,10 +8,12 @@ type ButtonProps = Readonly<Merge<HTMLAttributes<HTMLButtonElement>, {
 export default function Button({children, ...rest}: ButtonProps) {
     const tag = useRef<string>(`R${getRandomNumberInRange(10, 99)}`);
     return (
-        <button {...rest} className={styles.cybr_btn}>
-            {children}<span aria-hidden>_</span>
-            <span aria-hidden className={styles.cybr_btn__glitch}>{children}_</span>
-            <span aria-hidden className={styles.cybr_btn__tag}>{tag.current}</span>
-        </button>
+        <div>
+            <button {...rest} className={styles.cybr_btn}>
+                {children}<span aria-hidden>_</span>
+                <span aria-hidden className={styles.cybr_btn__glitch}>{children}_</span>
+                <span aria-hidden className={styles.cybr_btn__tag}>{tag.current}</span>
+            </button>
+        </div>
     );
 }

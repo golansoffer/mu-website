@@ -1,6 +1,9 @@
 .server_name {
+    padding: 2rem;
     margin: auto auto auto 0;
     display: flex;
+    background: #FAFAFA;
+    color: black;
 }
 
 .server_credit {
@@ -13,10 +16,14 @@
 }
 
 .auth {
+    padding: 0 2rem;
     display: grid;
     align-items: center;
     margin-left: auto;
     text-transform: uppercase;
+    border: 1px solid #FAFAFA;
+    transition: all 100ms ease;
+    cursor: pointer;
 
     a {
         text-decoration: none;
@@ -25,20 +32,19 @@
     a:visited {
         color: inherit;
     }
+}
 
-    a:hover {
-        color: var(--highlight-color);
-    }
+.auth:hover {
+    background: #FAFAFA;
+    color: black;
 }
 
 .nav {
-    padding: 1rem 2rem;
     display: grid;
     grid-template-columns: 30% 1fr 30%;
     justify-items: center;
 
     ul {
-        padding: 0;
         margin: 0;
         display: grid;
         grid-auto-flow: column;
@@ -57,6 +63,7 @@
 
             a {
                 text-decoration: none;
+                transition: opacity 100ms ease;
             }
 
             a:visited {
@@ -64,14 +71,14 @@
             }
 
             a:hover {
-                color: var(--highlight-color);
+                opacity: 0.8;
             }
         }
     }
 }
 
 .container {
-    color: #FAFAFA;
+
     display: flex;
     flex-direction: column;
 }
