@@ -22,7 +22,7 @@ export function Home() {
                         Rediscover The Golden Era
                     </h1>
                     <h3>
-                        Top-tier tech meets old-school nostalgia in MU Core Online.
+                        Non P2W Top-tier tech meets old-school nostalgia in MU Core Online.
                     </h3>
                     <Button>Play</Button>
                 </div>
