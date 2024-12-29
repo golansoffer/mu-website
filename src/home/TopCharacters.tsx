@@ -53,7 +53,7 @@ const MOCK: Character[] = [
 
 export function Character({nickname, role, level, index, resets}: Omit<Character, 'uuid'> & { index: number }) {
     return <article className={styles.character_container}>
-        <h3>
+        <h3 className={styles.title}>
             {nickname}
         </h3>
         <div className={styles.img_container}>
@@ -68,7 +68,7 @@ export function Character({nickname, role, level, index, resets}: Omit<Character
 
 export function TopCharacters() {
     return <section className={styles.root}>
-        <h1>Top Players</h1>
+        <h1>Top Players_</h1>
         <div className={styles.container}>
             {MOCK.map((c, i) => <Character key={c.uuid} index={i + 1} nickname={c.nickname} level={c.level}
                                            role={c.role} resets={c.resets}/>)}

@@ -56,7 +56,8 @@
 
     h3 {
         font-size: 1.2rem;
-        color: hsl(180, 90%, 50%);
+        color: #BFBFBF;
+        margin: 0;
     }
 
     background: rgba(255, 255, 255, 0.1);

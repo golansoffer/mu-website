@@ -2,6 +2,7 @@ import styles from "./Home.module.css";
 import {SequentialVideoPlayer} from "../components/video/VideoPlayer";
 import Button from "../components/buttons/primary/Root";
 import {TopCharacters} from "./TopCharacters";
+import {ServerInfo} from "./ServerInfo";
 
 const videoSources = [
     {src: "/mu_cinematic.mp4", type: "video/mp4"},
@@ -19,15 +20,16 @@ export function Home() {
             <section className={styles.banner}>
                 <div className={styles.banner_content}>
                     <h1>
-                        Rediscover The Golden Era
+                        Rediscover The Golden Era_
                     </h1>
                     <h3>
-                        Non P2W Top-tier tech meets old-school nostalgia in MU Core Online.
+                        Top-tier tech meets old-school non-P2W nostalgia in MU Core Online.
                     </h3>
                     <Button>Play</Button>
                 </div>
             </section>
 
+            <ServerInfo/>
             <TopCharacters/>
         </main>
     );

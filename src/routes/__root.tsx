@@ -1,5 +1,5 @@
 import * as React from "react";
-import {createRootRoute, Outlet} from "@tanstack/react-router";
+import {createRootRoute, Outlet, ScrollRestoration} from "@tanstack/react-router";
 import {Navigation} from "../navigation/Navigation";
 import {Footer} from "../components/footer/Root";
 import {ModalProvider} from "../components/modal/ModalContext";
@@ -11,9 +11,10 @@ export const Route = createRootRoute({
 function RootComponent() {
     return (
         <ModalProvider>
-            <Navigation/>
+            <ScrollRestoration/>
             <Outlet/>
             <Footer/>
+            <Navigation/>
         </ModalProvider>
     );
 }

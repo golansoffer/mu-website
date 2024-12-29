@@ -1,9 +1,9 @@
 .root {
-    margin-top: 14rem;
+    --margin-left: 2rem;
     width: 100%;
 
     h1 {
-        margin: 1rem;
+        margin: 2rem var(--margin-left);
     }
 }
 
@@ -24,7 +24,7 @@
 
     h3 {
         font-size: 3rem;
-        margin: 1rem;
+        margin: var(--margin-left);
     }
 }
 
@@ -39,12 +39,6 @@
         height: 100%;
         object-fit: cover;
         object-position: center 40%;
-        transition: opacity 100ms ease;
-        opacity: 0.9;
-
-        &:hover {
-            opacity: 1;
-        }
     }
 
     span {
@@ -70,7 +64,7 @@
 }
 
 .desc_container {
-    margin: 1rem;
+    margin: var(--margin-left);
     font-size: 2rem;
     text-transform: uppercase;
 

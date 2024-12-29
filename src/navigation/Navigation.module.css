@@ -21,7 +21,6 @@
     align-items: center;
     margin-left: auto;
     text-transform: uppercase;
-    border: 1px solid #FAFAFA;
     transition: all 100ms ease;
     cursor: pointer;
 
@@ -40,9 +39,14 @@
 }
 
 .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     display: grid;
     grid-template-columns: 30% 1fr 30%;
     justify-items: center;
+    background: black;
 
     ul {
         margin: 0;
