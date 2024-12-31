@@ -30,6 +30,13 @@ const MOCK: Character[] = [
     },
     {
         uuid: crypto.randomUUID(),
+        nickname: 'Bulbuliko',
+        role: 'DK',
+        level: 345,
+        resets: 0,
+    },
+    {
+        uuid: crypto.randomUUID(),
         nickname: 'San',
         role: 'DW',
         level: 342,
@@ -37,18 +44,11 @@ const MOCK: Character[] = [
     },
     {
         uuid: crypto.randomUUID(),
-        nickname: 'Hellsing',
-        role: 'DL',
+        nickname: 'Mathilda',
+        role: 'ELF',
         level: 322,
         resets: 0,
     },
-    {
-        uuid: crypto.randomUUID(),
-        nickname: 'Bulbuliko',
-        role: 'DK',
-        level: 276,
-        resets: 0,
-    }
 ]
 
 export function Character({nickname, role, level, index, resets}: Omit<Character, 'uuid'> & { index: number }) {
