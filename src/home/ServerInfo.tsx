@@ -43,7 +43,7 @@ export function ServerInfo() {
             </div>
         </article>
         <article className={styles.image_container}>
-            <img src='/public/wp_1.jpg' alt="wallpaper"/>
+            <img src='/wp_1.jpg' alt="wallpaper"/>
         </article>
     </section>
 }
