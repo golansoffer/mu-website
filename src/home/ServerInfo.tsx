@@ -6,7 +6,6 @@ export function ServerInfo() {
         <article className={styles.container}>
             <div>
                 <h1>About.</h1>
-
                 <p>
                     We’re a team of real-life software engineers and devoted MU fans, merging <strong>classic MU
                     nostalgia</strong> with
