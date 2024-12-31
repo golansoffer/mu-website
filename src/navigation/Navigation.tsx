@@ -1,7 +1,34 @@
 import {Link} from "@tanstack/react-router";
 import style from "./Navigation.module.css";
 import {CSSProperties, useEffect, useState} from "react";
-import {AuthBar} from "../components/auth/AuthBar";
+
+type CreditSVGProps = {
+    color?: string;
+    size?: number;
+}
+
+function CreditSVG({color = 'inherit', size = 30}: CreditSVGProps) {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            width={`${size}px`}
+            height={`${size}px`}
+            fill={color}
+        >
+            <text
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                dy=".3em"
+                fontFamily="Arial, sans-serif"
+                fontSize="10"
+            >
+                ©
+            </text>
+        </svg>
+    );
+};
 
 function GlitchedText({children, hovered = true}: { children: string, hovered?: boolean }) {
     return <div className={style.container}>
@@ -18,11 +45,11 @@ export function Navigation() {
     const isScrolled = useIsWindowScrolled();
     return (
         <nav className={`${style.nav} ${isScrolled ? style.scroll_mode : ''}`}>
-            <h2 className={style.server_name}>
+            <h2 className={`${style.server_name}${isScrolled ? ` ${style.scrolled_server_name}` : ''}`}>
                 <GlitchedText hovered={false}>
                     MU CORE
                 </GlitchedText>
-                <div className={style.server_credit}/>
+                <CreditSVG color={isScrolled ? 'black' : 'white'}/>
             </h2>
             <ul>
                 <li>
@@ -52,7 +79,7 @@ export function Navigation() {
                 </li>
 
             </ul>
-            <AuthBar className={style.auth}/>
+            <div/>
         </nav>
     );
 }

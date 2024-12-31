@@ -2,17 +2,12 @@
     padding: 2rem;
     margin: auto auto auto 0;
     display: flex;
-    background: #FAFAFA;
-    color: black;
+    transition: all 1s;
 }
 
-.server_credit {
-    width: 25px;
-    background-image: url("/public/svg/c.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right top;
-
+.scrolled_server_name {
+    background: #FAFAFA;
+    color: black;
 }
 
 .auth {

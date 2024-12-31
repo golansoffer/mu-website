@@ -27,7 +27,7 @@ export function Home() {
                     <h3>
                         Top-tier tech meets old-school non-P2W nostalgia in MU Core Online.
                     </h3>
-                    <Button>Play</Button>
+                    <Button>JOIN</Button>
                 </div>
             </section>
 
