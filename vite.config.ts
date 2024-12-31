@@ -6,4 +6,5 @@ import {TanStackRouterVite} from '@tanstack/router-plugin/vite'
 export default defineConfig({
     base: '/mu-website/',
     plugins: [TanStackRouterVite({}), react()],
+    assetsInclude: ['*/.mp4'],
 })
