@@ -5,9 +5,9 @@ import {TopCharacters} from "./TopCharacters";
 import {ServerInfo} from "./ServerInfo";
 
 const videoSources = [
-    {src: "/mu-website/mu_cinematic.mp4", type: "video/mp4"},
-    {src: "/mu-website/mu_short.mp4", type: "video/mp4"},
-    {src: "/mu-website/movie.webm", type: "video/webm"},
+    {src: "/mu_cinematic.mp4", type: "video/mp4"},
+    {src: "/mu_short.mp4", type: "video/mp4"},
+    {src: "/movie.webm", type: "video/webm"},
 ];
 
 export function Home() {
