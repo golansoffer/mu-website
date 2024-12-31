@@ -47,7 +47,7 @@
     display: grid;
     grid-template-columns: 30% 1fr 30%;
     justify-items: center;
-    transition: background-color 200ms, box-shadow 200ms;
+    transition: background-color 1s, box-shadow 1ms;
 
     ul {
         margin: 0;
