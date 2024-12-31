@@ -5,8 +5,8 @@ import {TopCharacters} from "./TopCharacters";
 import {ServerInfo} from "./ServerInfo";
 
 const videoSources = [
-    {src: "/mu_cinematic.mp4", type: "video/mp4"},
     {src: "/mu_short.mp4", type: "video/mp4"},
+    {src: "/mu_cinematic.mp4", type: "video/mp4"},
     {src: "/movie.webm", type: "video/webm"},
 ];
 

@@ -1,6 +1,6 @@
 import {Link} from "@tanstack/react-router";
 import style from "./Navigation.module.css";
-import {CSSProperties} from "react";
+import {CSSProperties, useEffect, useState} from "react";
 import {AuthBar} from "../components/auth/AuthBar";
 
 function GlitchedText({children, hovered = true}: { children: string, hovered?: boolean }) {
@@ -15,8 +15,9 @@ function GlitchedText({children, hovered = true}: { children: string, hovered?: 
 }
 
 export function Navigation() {
+    const isScrolled = useIsWindowScrolled();
     return (
-        <nav className={style.nav}>
+        <nav className={`${style.nav} ${isScrolled ? style.scroll_mode : ''}`}>
             <h2 className={style.server_name}>
                 <GlitchedText hovered={false}>
                     MU CORE
@@ -54,4 +55,19 @@ export function Navigation() {
             <AuthBar className={style.auth}/>
         </nav>
     );
+}
+
+function useIsWindowScrolled() {
+    const [state, setState] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setState(window.scrollY > 200);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return state;
 }

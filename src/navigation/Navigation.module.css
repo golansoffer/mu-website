@@ -39,6 +39,7 @@
 }
 
 .nav {
+    background: transparent;
     position: fixed;
     top: 0;
     right: 0;
@@ -46,8 +47,7 @@
     display: grid;
     grid-template-columns: 30% 1fr 30%;
     justify-items: center;
-    background: black;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+    transition: background-color 200ms, box-shadow 200ms;
 
     ul {
         margin: 0;
@@ -80,6 +80,11 @@
             }
         }
     }
+}
+
+.scroll_mode {
+    background: black;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
 }
 
 .container {
