@@ -3,6 +3,7 @@ import {SequentialVideoPlayer} from "../components/video/VideoPlayer";
 import Button from "../components/buttons/primary/Root";
 import {TopCharacters} from "./TopCharacters";
 import {ServerInfo} from "./ServerInfo";
+import {Title} from "../components/title/Title";
 
 const videoSources = [
     {src: "/mu_short.mp4", type: "video/mp4"},
@@ -19,9 +20,10 @@ export function Home() {
 
             <section className={styles.banner}>
                 <div className={styles.banner_content}>
-                    <h1>
-                        Rediscover The Golden Era_
-                    </h1>
+                    <Title>
+                        Rediscover The Golden Era
+                        <span>_</span>
+                    </Title>
                     <h3>
                         Top-tier tech meets old-school non-P2W nostalgia in MU Core Online.
                     </h3>

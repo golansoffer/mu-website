@@ -32,6 +32,7 @@
 }
 
 .form_title {
+    font-size: 3rem;
 }
 
 .form_title::after {
