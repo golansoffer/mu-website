@@ -31,17 +31,7 @@
     padding: 2rem;
 }
 
-.form {
-    display: grid;
-    grid-auto-flow: row;
-    row-gap: 3rem;
-    align-items: center;
-    justify-items: center;
-}
-
 .form_title {
-    text-transform: uppercase;
-    font-size: 3rem;
 }
 
 .form_title::after {
@@ -51,23 +41,13 @@
     display: block;
     background-color: #fff;
     clip-path: polygon(0 0, 0 100%, 10% 100%, calc(10% + 4px) 2px, 100% 2px, 100% 0);
+
 }
 
-.form_title span {
-    animation: cyber-glitch-3 1s linear infinite;
-}
-
-@keyframes cyber-glitch-3 {
-    0% {
-        visibility: visible;
-    }
-    49% {
-        visibility: visible;
-    }
-    50% {
-        visibility: hidden;
-    }
-    100% {
-        visibility: hidden;
-    }
+.form {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 3rem;
+    align-items: center;
+    justify-items: center;
 }

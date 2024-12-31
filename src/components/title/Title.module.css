@@ -1,0 +1,23 @@
+.title {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.title span {
+    animation: cyber-glitch-3 1s linear infinite;
+}
+
+@keyframes cyber-glitch-3 {
+    0% {
+        visibility: visible;
+    }
+    49% {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: hidden;
+    }
+}

@@ -7,9 +7,10 @@ import {useCallback, useRef} from "react";
 import {getRandomNumberInRange} from "../utils";
 import {useMutation} from "@tanstack/react-query";
 import {fetcher} from "../api/root";
+import {Title} from "../components/title/Title";
 
 const registrationTitles: string[] = [
-    "Ready for Battle?",
+    "Prepare for Battle",
     "Forge Your Path",
     "Your Legacy",
     "Enter the Realm",
@@ -23,10 +24,10 @@ export function Register() {
     const index = useRef(getRandomNumberInRange(0, registrationTitles.length - 1));
     return <main className={styles.main}>
         <div className={styles.cubes_animation}/>
-        <h1 className={styles.form_title}>
+        <Title className={styles.form_title}>
             {registrationTitles[index.current]}
             <span>.</span>
-        </h1>
+        </Title>
         <RegisterForm/>
     </main>
 }
