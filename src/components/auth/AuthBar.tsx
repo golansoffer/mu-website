@@ -1,10 +1,8 @@
-import {Link} from "@tanstack/react-router";
 import {HTMLAttributes} from "react";
 import {useQuery} from "@tanstack/react-query";
 import {fetcher} from "../../api/root";
 //import {useModal} from "../modal/ModalContext";
 import {QUERY_KEYS} from "../../constants/query_keys";
-import {LoginForm} from "../login/Form";
 
 type Response = {
     id: number;
@@ -33,25 +31,16 @@ export function AuthBar(props: AuthBarProps) {
             {data ? (
                 <div>Hey, {data.username}</div>
             ) : (
-                <div>
-                    {/*<button onClick={() => {
-                        setModalContent(<Login/>);
-                    }}>
-                        Login
-                    </button>
-                    <br/>*/}
-                    <Link to="/register" preload="viewport">
-                        Register
-                    </Link>
-                </div>
+                <div>no-auth</div>
             )}
         </div>
     );
 }
 
+/*
 function Login() {
     return <section>
         <h3>LOGIN</h3>
         <LoginForm/>
     </section>
-}
+}*/

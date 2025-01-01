@@ -1,11 +1,16 @@
 import styles from './ServerInfo.module.css';
+import {GamepadAnimation} from "../components/hacker/gamepad/GamepadLottie";
 
 
 export function ServerInfo() {
     return <section className={styles.root}>
         <article className={styles.container}>
             <div>
-                <h1>About.</h1>
+
+                <h1 className={styles.title_container}>
+                    About
+                    (<GamepadAnimation/>)
+                </h1>
                 <p>
                     We’re a team of real-life software engineers and devoted MU fans, merging <strong>classic MU
                     nostalgia</strong> with

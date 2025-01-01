@@ -15,22 +15,7 @@
     display: grid;
     align-items: center;
     margin-left: auto;
-    text-transform: uppercase;
-    transition: all 100ms ease;
     cursor: pointer;
-
-    a {
-        text-decoration: none;
-    }
-
-    a:visited {
-        color: inherit;
-    }
-}
-
-.auth:hover {
-    background: #FAFAFA;
-    color: black;
 }
 
 .nav {

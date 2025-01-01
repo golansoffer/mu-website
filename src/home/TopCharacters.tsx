@@ -1,4 +1,5 @@
 import styles from './TopCharacters.module.css';
+import {Title} from "../components/title/Title";
 
 type Role = 'DK' | 'DW' | 'ELF' | 'MG' | 'DL';
 
@@ -68,7 +69,7 @@ export function Character({nickname, role, level, index, resets}: Omit<Character
 
 export function TopCharacters() {
     return <section className={styles.root}>
-        <h1>Top Players_</h1>
+        <Title>Top Players<span>_</span></Title>
         <div className={styles.container}>
             {MOCK.map((c, i) => <Character key={c.uuid} index={i + 1} nickname={c.nickname} level={c.level}
                                            role={c.role} resets={c.resets}/>)}
