@@ -1,4 +1,5 @@
 .main {
+    padding-top: 0;
     display: grid;
     grid-template-rows: var(--main-section-height) 1fr;
     justify-items: center;
@@ -43,7 +44,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Transparent overlay */
+    background: rgba(0, 0, 0, 0.4); /* Transparent overlay */
 }
 
 .banner_content {
