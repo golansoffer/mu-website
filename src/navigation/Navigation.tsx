@@ -28,7 +28,7 @@ function CreditSVG({color = 'inherit', size = 30}: CreditSVGProps) {
             </text>
         </svg>
     );
-};
+}
 
 function GlitchedText({children, hovered = true}: { children: string, hovered?: boolean }) {
     return <div className={style.container}>
@@ -46,16 +46,18 @@ export function Navigation() {
     return (
         <nav className={`${style.nav} ${isScrolled ? style.scroll_mode : ''}`}>
             <h2 className={`${style.server_name}${isScrolled ? ` ${style.scrolled_server_name}` : ''}`}>
-                <GlitchedText hovered={false}>
-                    MU CORE
-                </GlitchedText>
+                <Link to="/">
+                    <GlitchedText hovered={false}>
+                        MU CORE
+                    </GlitchedText>
+                </Link>
                 <CreditSVG color={isScrolled ? 'black' : 'white'}/>
             </h2>
             <ul>
                 <li>
-                    <Link to="/">
+                    <Link to="/news">
                         <GlitchedText>
-                            Home
+                            News
                         </GlitchedText>
                     </Link>
                 </li>
@@ -73,7 +75,7 @@ export function Navigation() {
                 <li>
                     <Link to="/shop">
                         <GlitchedText>
-                            Shop
+                            Guides
                         </GlitchedText>
                     </Link>
                 </li>

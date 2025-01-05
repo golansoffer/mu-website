@@ -71,8 +71,15 @@ export function TopCharacters() {
     return <section className={styles.root}>
         <Title>Top Players<span>_</span></Title>
         <div className={styles.container}>
-            {MOCK.map((c, i) => <Character key={c.uuid} index={i + 1} nickname={c.nickname} level={c.level}
-                                           role={c.role} resets={c.resets}/>)}
+            {MOCK.map((c, i) => (
+                <Character
+                    key={c.uuid}
+                    index={i + 1}
+                    nickname={c.nickname}
+                    level={c.level}
+                    role={c.role}
+                    resets={c.resets}/>
+            ))}
         </div>
     </section>
 }

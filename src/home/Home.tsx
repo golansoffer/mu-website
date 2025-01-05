@@ -4,6 +4,7 @@ import Button from "../components/buttons/primary/Root";
 import {TopCharacters} from "./TopCharacters";
 import {ServerInfo} from "./ServerInfo";
 import {Title} from "../components/title/Title";
+import {useEffect, useState} from "react";
 
 const videoSources = [
     {src: "/mu_short.mp4", type: "video/mp4"},
@@ -12,13 +13,25 @@ const videoSources = [
 ];
 
 export function Home() {
+    const [isHidden, setIsHidden] = useState(true);
+
+    useEffect(() => {
+        const id = setTimeout(function () {
+            setIsHidden(false);
+        }, 2000);
+
+        return function () {
+            clearTimeout(id)
+        }
+    }, []);
+
     return (
         <main className={styles.main}>
             <section className={styles.cover}>
                 <SequentialVideoPlayer sources={videoSources}/>
             </section>
 
-            <section className={styles.banner}>
+            <section className={`${styles.banner} ${isHidden ? styles.banner_hidden : ''}`}>
                 <div className={styles.banner_content}>
                     <Title>
                         Rediscover The Golden Era
