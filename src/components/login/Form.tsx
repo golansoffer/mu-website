@@ -49,7 +49,7 @@ export function LoginForm() {
 
     const {mutateAsync} = useMutation({
         mutationFn: async function (values: LoginPayload) {
-            const {token} = await fetcher<{ token: string }, LoginPayload>('login', {
+            const {token} = await fetcher<{ token: string }>('login', {
                 method: 'POST',
                 body: JSON.stringify(values),
             });

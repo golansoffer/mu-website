@@ -1,6 +1,6 @@
-const API_URL = 'http://localhost:5565/api';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5565/api';
 
-export function fetcher<T, P>(url: string, options?: RequestInit) {
+export function fetcher<T>(url: string, options?: RequestInit) {
     const token = localStorage.getItem('token');
     return fetch(`${API_URL}/${url}`, {
         headers: {

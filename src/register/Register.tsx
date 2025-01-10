@@ -35,7 +35,7 @@ export function Register() {
 type FormPayload = {
     username: string;
     password: string;
-    confirmPassword: string;
+    repeatPassword: string;
     email: string;
 }
 
@@ -43,13 +43,13 @@ const userSchema = z
     .object({
         username: z.string().min(4, "Username must be at least 4 characters long."),
         password: z.string().min(8, "Password must be at least 8 characters long."),
-        confirmPassword: z
+        repeatPassword: z
             .string()
             .min(8, "Confirm Password must be at least 8 characters long."),
         email: z.string().email("Invalid email address."),
     })
-    .refine((data) => data.password === data.confirmPassword, {
-        path: ["confirmPassword"], // Points the error at `confirmPassword`
+    .refine((data) => data.password === data.repeatPassword, {
+        path: ["repeatPassword"], // Points the error at `repeatPassword`
         message: "Passwords do not match.",
     });
 
@@ -62,10 +62,11 @@ export function RegisterForm() {
             username: '',
             email: '',
             password: '',
-            confirmPassword: '',
+            repeatPassword: '',
         },
         onSubmit: async ({value}) => {
-            await mutateAsync(value);
+            const {repeatPassword} = value;
+            await mutateAsync({...value, repeatPassword});
         },
         validators: {
             onChange: userSchema,
@@ -74,7 +75,7 @@ export function RegisterForm() {
 
     const {mutateAsync} = useMutation({
         mutationFn: function (payload: FormPayload) {
-            return fetcher<{ message: string }, FormPayload>('register', {
+            return fetcher<{ message: string }>('register', {
                 method: 'POST',
                 body: JSON.stringify(payload),
             })
@@ -124,7 +125,7 @@ export function RegisterForm() {
                     )}
                 />
                 <form.Field
-                    name="confirmPassword"
+                    name="repeatPassword"
                     children={(field) => (
                         <TextInput
                             label="Confirm Password"
