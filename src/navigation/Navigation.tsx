@@ -80,6 +80,13 @@ export function Navigation() {
                     </Link>
                 </li>
 
+                <li>
+                    <Link to="/register">
+                        <GlitchedText>
+                            Register
+                        </GlitchedText>
+                    </Link>
+                </li>
             </ul>
             <div/>
         </nav>
