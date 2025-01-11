@@ -69,7 +69,7 @@ export function RegisterForm() {
             await mutateAsync({...value, repeatPassword});
         },
         validators: {
-            onChange: userSchema,
+            onBlur: userSchema,
         },
     });
 
@@ -124,7 +124,6 @@ export function RegisterForm() {
                             onBlur={field.handleBlur}
                             onChange={field.handleChange}
                             error={field.state.meta.errors?.[0]?.toString()}
-                            
                         />
                     )}
                 />
