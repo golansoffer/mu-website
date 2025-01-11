@@ -41,7 +41,7 @@ type FormPayload = {
 
 const userSchema = z
     .object({
-        username: z.string().min(4, "Username must be at least 4 characters long."),
+        username: z.string().min(4, "Username must be at least 4 characters long.").max(8, "Username cannot exceed 8 characters long."),
         password: z.string().min(8, "Password must be at least 8 characters long."),
         repeatPassword: z
             .string()
@@ -108,7 +108,7 @@ export function RegisterForm() {
                             value={field.state.value}
                             onBlur={field.handleBlur}
                             onChange={field.handleChange}
-                            error={field.state.meta.errors?.[0]?.toString()}
+                            error={field.state.meta.isTouched && field.state.meta.isDirty ? field.state.meta.errors?.[0]?.toString() : undefined}
                         />
                     )}
                 />
@@ -123,7 +123,7 @@ export function RegisterForm() {
                             value={field.state.value}
                             onBlur={field.handleBlur}
                             onChange={field.handleChange}
-                            error={field.state.meta.errors?.[0]?.toString()}
+                            error={field.state.meta.isTouched && field.state.meta.isDirty ? field.state.meta.errors?.[0]?.toString() : undefined}
                         />
                     )}
                 />
@@ -137,7 +137,7 @@ export function RegisterForm() {
                             value={field.state.value}
                             onBlur={field.handleBlur}
                             onChange={field.handleChange}
-                            error={field.state.meta.errors?.[0]?.toString()}
+                            error={field.state.meta.isTouched && field.state.meta.isDirty ? field.state.meta.errors?.[0]?.toString() : undefined}
                             type="password"
                         />
                     )}
@@ -152,7 +152,7 @@ export function RegisterForm() {
                             value={field.state.value}
                             onBlur={field.handleBlur}
                             onChange={field.handleChange}
-                            error={field.state.meta.errors?.[0]?.toString()}
+                            error={field.state.meta.isTouched && field.state.meta.isDirty ? field.state.meta.errors?.[0]?.toString() : undefined}
                             type="email"
                         />
                     )}
