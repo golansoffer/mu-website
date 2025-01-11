@@ -71,15 +71,6 @@ export function Navigation() {
                     </Link>
                 </li>
 
-
-                <li>
-                    <Link to="/shop">
-                        <GlitchedText>
-                            Guides
-                        </GlitchedText>
-                    </Link>
-                </li>
-
                 <li>
                     <Link to="/register">
                         <GlitchedText>
