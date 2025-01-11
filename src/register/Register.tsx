@@ -108,6 +108,7 @@ export function RegisterForm() {
                             value={field.state.value}
                             onBlur={field.handleBlur}
                             onChange={field.handleChange}
+                            error={field.state.meta.errors?.[0]?.toString()}
                         />
                     )}
                 />
@@ -115,12 +116,15 @@ export function RegisterForm() {
                     name="password"
                     children={(field) => (
                         <TextInput
+                            type="password"
                             label={field.name}
                             name={field.name}
                             placeholder={`Enter ${field.name}...`}
                             value={field.state.value}
                             onBlur={field.handleBlur}
                             onChange={field.handleChange}
+                            error={field.state.meta.errors?.[0]?.toString()}
+                            
                         />
                     )}
                 />
@@ -134,6 +138,8 @@ export function RegisterForm() {
                             value={field.state.value}
                             onBlur={field.handleBlur}
                             onChange={field.handleChange}
+                            error={field.state.meta.errors?.[0]?.toString()}
+                            type="password"
                         />
                     )}
                 />
@@ -147,6 +153,8 @@ export function RegisterForm() {
                             value={field.state.value}
                             onBlur={field.handleBlur}
                             onChange={field.handleChange}
+                            error={field.state.meta.errors?.[0]?.toString()}
+                            type="email"
                         />
                     )}
                 />

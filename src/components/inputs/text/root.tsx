@@ -1,28 +1,33 @@
-import {HTMLAttributes, useRef} from "react";
+import {InputHTMLAttributes, useRef} from "react";
 import styles from './root.module.css';
 import {fnPlaceholder, Merge} from "../../../utils";
 
 
-type TextInputProps = Merge<HTMLAttributes<HTMLInputElement>, {
-    name: string;
+type TextInputProps = Merge<InputHTMLAttributes<HTMLInputElement>, {
     label: string;
     value: string;
-    placeholder?: string;
     onChange: (value: string) => void;
+    error?: string | null;
 }>;
 
 /*
     Inspiration:
     https://codepen.io/gwannon/pen/LYjvOLK
 */
-export function TextInput({value, label, placeholder, onChange = fnPlaceholder, ...rest}: TextInputProps) {
+export function TextInput({ value, label, onChange = fnPlaceholder, error, ...rest }: TextInputProps) {
     const _id = useRef(crypto.randomUUID());
     return (
         <div className={styles.input_grid}>
             <label htmlFor={_id.current}>{label}</label>
             <div className={styles.root}>
-                <input {...rest} placeholder={placeholder} className={styles.root_input} id={_id.current} type="text"
-                       value={value} onChange={(e) => onChange(e.target.value)}/>
+                <input
+                    {...rest}
+                    className={styles.root_input}
+                    id={_id.current}
+                    value={value}
+                    onChange={(e) => onChange(e.target.value)}
+                />
+                {error && <div className={styles.error}>{error}</div>}
             </div>
         </div>
     );
