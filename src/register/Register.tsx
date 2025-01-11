@@ -41,11 +41,12 @@ type FormPayload = {
 
 const userSchema = z
     .object({
-        username: z.string().min(4, "Username must be at least 4 characters long.").max(8, "Username cannot exceed 8 characters long."),
-        password: z.string().min(8, "Password must be at least 8 characters long."),
+        username: z.string().min(4, "Username must be at least 4 characters long.").max(20, "Username must not exceed 32 characters."),
+        password: z.string().min(8, "Password must be at least 8 characters long.").max(32, "Password must not exceed 32 characters."),
         repeatPassword: z
             .string()
-            .min(8, "Confirm Password must be at least 8 characters long."),
+            .min(8, "Confirm Password must be at least 8 characters long.")
+            .max(32, "Confirm Password must not exceed 32 characters."),
         email: z.string().email("Invalid email address."),
     })
     .refine((data) => data.password === data.repeatPassword, {
