@@ -1,7 +1,10 @@
 .main {
     position: relative;
-    margin-top: 10rem;
+    margin-top: 3rem;
     display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    row-gap: 1rem;
     justify-content: center;
     padding-bottom: var(--main-bottom-gap);
 }
